@@ -56,7 +56,7 @@ extern "C" {
 #define LEVELDB_API __declspec(dllimport)
 #endif
 #else
-#define SNAPPY_API
+#define LEVELDB_API
 #endif
 
 /* Exported types */
