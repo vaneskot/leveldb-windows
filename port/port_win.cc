@@ -31,6 +31,9 @@
 #include "port/port_win.h"
 
 #include <windows.h>
+#undef min
+#undef max
+#undef DeleteFile
 #include <cassert>
 
 namespace leveldb {

@@ -1003,12 +1003,12 @@ Win32Env::~Win32Env()
 
 }  // Win32 namespace
 
-static port::OnceType once = LEVELDB_ONCE_INIT;
+static port::OnceType once_env = LEVELDB_ONCE_INIT;
 static Env* default_env;
 static void InitDefaultEnv() { default_env = new Win32::Win32Env(); }
 
 Env* Env::Default() {
-  port::InitOnce(&once, InitDefaultEnv);
+  port::InitOnce(&once_env, InitDefaultEnv);
   return default_env;
 }
 
