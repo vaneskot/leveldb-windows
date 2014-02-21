@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include "db/db_impl.h"
 #include "db/version_set.h"
+#include "leveldb/c.h"
 #include "leveldb/cache.h"
 #include "leveldb/db.h"
 #include "leveldb/env.h"
@@ -923,7 +924,7 @@ class Benchmark {
 
 }  // namespace leveldb
 
-int main(int argc, char** argv) {
+extern "C" int leveldb_benchmark(int argc, char** argv) {
   FLAGS_write_buffer_size = leveldb::Options().write_buffer_size;
   FLAGS_open_files = leveldb::Options().max_open_files;
   std::string default_db_path;

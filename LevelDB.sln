@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LevelDB", "LevelDB\LevelDB.vcxproj", "{5B593D71-934A-4D5C-9581-1F89BB839E48}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Benchmark", "Benchmark\Benchmark.vcxproj", "{BD8D65E7-9D22-48BE-A446-B5EF79C27364}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5B593D71-934A-4D5C-9581-1F89BB839E48} = {5B593D71-934A-4D5C-9581-1F89BB839E48}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +20,10 @@ Global
 		{5B593D71-934A-4D5C-9581-1F89BB839E48}.Debug|Win32.Build.0 = Debug|Win32
 		{5B593D71-934A-4D5C-9581-1F89BB839E48}.Release|Win32.ActiveCfg = Release|Win32
 		{5B593D71-934A-4D5C-9581-1F89BB839E48}.Release|Win32.Build.0 = Release|Win32
+		{BD8D65E7-9D22-48BE-A446-B5EF79C27364}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD8D65E7-9D22-48BE-A446-B5EF79C27364}.Debug|Win32.Build.0 = Debug|Win32
+		{BD8D65E7-9D22-48BE-A446-B5EF79C27364}.Release|Win32.ActiveCfg = Release|Win32
+		{BD8D65E7-9D22-48BE-A446-B5EF79C27364}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

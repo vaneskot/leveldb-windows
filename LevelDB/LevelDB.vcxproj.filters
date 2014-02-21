@@ -165,6 +165,15 @@
     <ClCompile Include="..\port\win\crc32c_win.cc">
       <Filter>Source Files\port</Filter>
     </ClCompile>
+    <ClCompile Include="..\db\db_bench.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\histogram.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\util\testutil.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

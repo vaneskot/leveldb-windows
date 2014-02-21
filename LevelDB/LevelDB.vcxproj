@@ -45,11 +45,13 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)$(PlatformTarget)\$(Configuration)\</OutDir>
     <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(PlatformTarget)\$(Configuration)\</OutDir>
     <IntDir>$(PlatformTarget)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)32</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -87,6 +89,7 @@
     <ClCompile Include="..\db\builder.cc" />
     <ClCompile Include="..\db\c.cc" />
     <ClCompile Include="..\db\dbformat.cc" />
+    <ClCompile Include="..\db\db_bench.cc" />
     <ClCompile Include="..\db\db_impl.cc" />
     <ClCompile Include="..\db\db_iter.cc" />
     <ClCompile Include="..\db\filename.cc" />
@@ -119,9 +122,11 @@
     <ClCompile Include="..\util\env_win.cc" />
     <ClCompile Include="..\util\filter_policy.cc" />
     <ClCompile Include="..\util\hash.cc" />
+    <ClCompile Include="..\util\histogram.cc" />
     <ClCompile Include="..\util\logging.cc" />
     <ClCompile Include="..\util\options.cc" />
     <ClCompile Include="..\util\status.cc" />
+    <ClCompile Include="..\util\testutil.cc" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
