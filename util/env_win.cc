@@ -374,7 +374,7 @@ BOOL Win32SequentialFile::_Init()
 	ToWidePath(_filename, path);
 	_hFile = CreateFileW(path.c_str(),
                          GENERIC_READ,
-                         FILE_SHARE_READ,
+                         FILE_SHARE_READ | FILE_SHARE_WRITE,
                          NULL,
                          OPEN_EXISTING,
                          FILE_ATTRIBUTE_NORMAL,
