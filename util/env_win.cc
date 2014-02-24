@@ -658,8 +658,8 @@ Win32FileLock::~Win32FileLock()
 BOOL Win32FileLock::_Init( LPCWSTR path )
 {
     BOOL bRet = FALSE;
-    if(!_hFile)
-        _hFile = ::CreateFileW(path,0,0,NULL,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,NULL);
+    if (!_hFile)
+        _hFile = ::CreateFileW(path, GENERIC_READ | GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if(!_hFile || _hFile == INVALID_HANDLE_VALUE ){
         _hFile = NULL;
     }
