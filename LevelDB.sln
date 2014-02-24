@@ -10,7 +10,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Benchmark", "Benchmark\Benc
 		{5B593D71-934A-4D5C-9581-1F89BB839E48} = {5B593D71-934A-4D5C-9581-1F89BB839E48}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleTest", "SampleTest\SampleTest.vcxproj", "{805EF4EC-9054-42C0-95D5-63DDE5CCA875}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RunTests", "RunTests\RunTests.vcxproj", "{805EF4EC-9054-42C0-95D5-63DDE5CCA875}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

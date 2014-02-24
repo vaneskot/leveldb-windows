@@ -21,8 +21,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\db\autocompact_test.cc" />
+    <ClCompile Include="..\db\corruption_test.cc" />
+    <ClCompile Include="..\db\dbformat_test.cc" />
     <ClCompile Include="..\db\db_test.cc" />
+    <ClCompile Include="..\db\filename_test.cc" />
+    <ClCompile Include="..\db\log_test.cc" />
+    <ClCompile Include="..\db\skiplist_test.cc" />
+    <ClCompile Include="..\db\version_edit_test.cc" />
+    <ClCompile Include="..\db\version_set_test.cc" />
+    <ClCompile Include="..\db\write_batch_test.cc" />
+    <ClCompile Include="..\helpers\memenv\memenv_test.cc" />
     <ClCompile Include="..\leveldb-single-file.cpp" />
+    <ClCompile Include="..\table\filter_block_test.cc" />
+    <ClCompile Include="..\table\table_test.cc" />
+    <ClCompile Include="..\util\arena_test.cc" />
+    <ClCompile Include="..\util\bloom_test.cc" />
+    <ClCompile Include="..\util\cache_test.cc" />
+    <ClCompile Include="..\util\coding_test.cc" />
+    <ClCompile Include="..\util\crc32c_test.cc" />
+    <ClCompile Include="..\util\env_test.cc" />
+    <ClCompile Include="RunTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -31,6 +50,7 @@
     <ProjectGuid>{805EF4EC-9054-42C0-95D5-63DDE5CCA875}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>SampleTest</RootNamespace>
+    <ProjectName>RunTests</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
