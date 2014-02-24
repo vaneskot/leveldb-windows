@@ -30,9 +30,8 @@
 
 #include "port/port_win.h"
 
+#define NOMINMAX
 #include <windows.h>
-#undef min
-#undef max
 #undef DeleteFile
 #include <cassert>
 
