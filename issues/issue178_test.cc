@@ -17,7 +17,7 @@ const int kNumKeys = 1100000;
 
 std::string Key1(int i) {
   char buf[100];
-  snprintf(buf, sizeof(buf), "my_key_%d", i);
+  sprintf(buf, "my_key_%d", i);
   return buf;
 }
 
@@ -87,6 +87,8 @@ TEST(Issue178, Test) {
 
 }  // anonymous namespace
 
+#ifndef LEVELDB_PLATFORM_WINDOWS
 int main(int argc, char** argv) {
   return leveldb::test::RunAllTests();
 }
+#endif

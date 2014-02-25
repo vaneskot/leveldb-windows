@@ -25,15 +25,12 @@
     <Filter Include="Source Files\table">
       <UniqueIdentifier>{aa0a6920-57db-4ee6-beaf-29cbc68c05c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\issues">
+      <UniqueIdentifier>{c2d593bd-e344-43b4-81c7-6d526359fdf6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\leveldb-single-file.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\crc32c.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\snappy-single-file.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RunTests.cpp">
@@ -95,6 +92,12 @@
     </ClCompile>
     <ClCompile Include="..\table\table_test.cc">
       <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="..\issues\issue178_test.cc">
+      <Filter>Source Files\issues</Filter>
+    </ClCompile>
+    <ClCompile Include="..\issues\issue200_test.cc">
+      <Filter>Source Files\issues</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

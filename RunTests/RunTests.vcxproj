@@ -32,6 +32,8 @@
     <ClCompile Include="..\db\version_set_test.cc" />
     <ClCompile Include="..\db\write_batch_test.cc" />
     <ClCompile Include="..\helpers\memenv\memenv_test.cc" />
+    <ClCompile Include="..\issues\issue178_test.cc" />
+    <ClCompile Include="..\issues\issue200_test.cc" />
     <ClCompile Include="..\leveldb-single-file.cpp" />
     <ClCompile Include="..\table\filter_block_test.cc" />
     <ClCompile Include="..\table\table_test.cc" />
