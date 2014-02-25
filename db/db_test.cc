@@ -1801,10 +1801,6 @@ class ModelDB: public DB {
 
   explicit ModelDB(const Options& options): options_(options) { }
   ~ModelDB() { }
-  
-  virtual void SuspendCompactions() {}
-  virtual void ResumeCompactions() {}
-  
   virtual Status Put(const WriteOptions& o, const Slice& k, const Slice& v) {
     return DB::Put(o, k, v);
   }
