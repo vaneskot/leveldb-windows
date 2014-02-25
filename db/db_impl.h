@@ -136,7 +136,6 @@ class DBImpl : public DB {
   port::Mutex suspend_mutex;
   port::CondVar suspend_cv;
   int suspend_count;
-  bool suspended;
   static void SuspendWork(void* db);
   void SuspendCallback();
 
