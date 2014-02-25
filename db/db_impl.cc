@@ -1427,7 +1427,6 @@ void DBImpl::SuspendWork(void* db) {
 }
 void DBImpl::SuspendCallback() {
     MutexLock l(&suspend_mutex);
-    Log(options_.info_log, "Compactions suspended");
     suspended = true;
     suspend_cv.SignalAll();
     while( suspend_count > 0 ) {
@@ -1435,7 +1434,6 @@ void DBImpl::SuspendCallback() {
     }
     suspended = false;
     suspend_cv.SignalAll();
-    Log(options_.info_log, "Compactions resumed");
 }
 void DBImpl::ResumeCompactions() {
     MutexLock l(&suspend_mutex);
