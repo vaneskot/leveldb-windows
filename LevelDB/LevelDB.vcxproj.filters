@@ -335,9 +335,6 @@
     <ClInclude Include="..\port\port_win.h">
       <Filter>Header Files\port</Filter>
     </ClInclude>
-    <ClInclude Include="..\port\win\stdint.h">
-      <Filter>Header Files\port</Filter>
-    </ClInclude>
     <ClInclude Include="..\port\win\unistd.h">
       <Filter>Header Files\port</Filter>
     </ClInclude>

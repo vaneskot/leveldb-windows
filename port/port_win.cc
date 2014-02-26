@@ -121,10 +121,6 @@ void CondVar::SignalAll() {
   wait_mtx_.Unlock();
 }
 
-AtomicPointer::AtomicPointer(void* v) {
-  Release_Store(v);
-}
-
 BOOL CALLBACK InitHandleFunction (PINIT_ONCE InitOnce, PVOID func, PVOID *lpContext) {
   ((void (*)())func)();
   return true;
@@ -132,24 +128,6 @@ BOOL CALLBACK InitHandleFunction (PINIT_ONCE InitOnce, PVOID func, PVOID *lpCont
 
 void InitOnce(OnceType* once, void (*initializer)()) {
   InitOnceExecuteOnce((PINIT_ONCE)once, InitHandleFunction, initializer, NULL);
-}
-
-void* AtomicPointer::Acquire_Load() const {
-  void * p = nullptr;
-  InterlockedExchangePointer(&p, rep_);
-  return p;
-}
-
-void AtomicPointer::Release_Store(void* v) {
-  InterlockedExchangePointer(&rep_, v);
-}
-
-void* AtomicPointer::NoBarrier_Load() const {
-  return rep_;
-}
-
-void AtomicPointer::NoBarrier_Store(void* v) {
-  rep_ = v;
 }
 
 }

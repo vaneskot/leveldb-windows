@@ -143,6 +143,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>LEVELDB_PLATFORM_WINDOWS;LEVELDB_WITH_SNAPPY;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;_USRDLL;LEVELDB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)include;$(SolutionDir)port\win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -245,7 +246,6 @@
     <ClInclude Include="..\include\leveldb\write_batch.h" />
     <ClInclude Include="..\port\port.h" />
     <ClInclude Include="..\port\port_win.h" />
-    <ClInclude Include="..\port\win\stdint.h" />
     <ClInclude Include="..\port\win\unistd.h" />
     <ClInclude Include="..\table\block.h" />
     <ClInclude Include="..\table\block_builder.h" />

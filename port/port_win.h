@@ -37,6 +37,7 @@
 
 #include <string>
 #include <stdint.h>
+#include <atomic>
 #ifdef LEVELDB_WITH_SNAPPY
 #include <snappy.h>
 #endif
@@ -102,17 +103,22 @@ extern void InitOnce(port::OnceType*, void (*initializer)());
 // Storage for a lock-free pointer
 class AtomicPointer {
  private:
-  void * rep_;
+  std::atomic<void *> rep_;
  public:
-  AtomicPointer() : rep_(nullptr) { }
-  explicit AtomicPointer(void* v); 
-  void* Acquire_Load() const;
-
-  void Release_Store(void* v);
-
-  void* NoBarrier_Load() const;
-
-  void NoBarrier_Store(void* v);
+  AtomicPointer() { }
+  explicit AtomicPointer(void* v) : rep_(v) { }
+  inline void* Acquire_Load() const {
+    return rep_.load(std::memory_order_acquire);
+  }
+  inline void Release_Store(void* v) {
+    rep_.store(v, std::memory_order_release);
+  }
+  inline void* NoBarrier_Load() const {
+    return rep_.load(std::memory_order_relaxed);
+  }
+  inline void NoBarrier_Store(void* v) {
+    rep_.store(v, std::memory_order_relaxed);
+  }
 };
 
 inline bool Snappy_Compress(const char* input, size_t length,
