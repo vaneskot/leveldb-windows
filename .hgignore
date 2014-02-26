@@ -6,5 +6,7 @@ ipch
 *.sdf
 *.opensdf
 *.user
+*.nupkg
+*.aps
 syntax: regexp
 packages/.*[0-9].*
