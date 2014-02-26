@@ -32,6 +32,7 @@ TEST(EnvPosixTest, RunImmediately) {
   ASSERT_TRUE(called.NoBarrier_Load() != NULL);
 }
 
+#ifndef LEVELDB_PLATFORM_WINDOWS
 TEST(EnvPosixTest, RunMany) {
   port::AtomicPointer last_id (NULL);
 
@@ -63,6 +64,7 @@ TEST(EnvPosixTest, RunMany) {
   void* cur = last_id.Acquire_Load();
   ASSERT_EQ(4, reinterpret_cast<uintptr_t>(cur));
 }
+#endif
 
 struct State {
   port::Mutex mu;
