@@ -30,7 +30,6 @@
 
 #include "port/port_win.h"
 
-#define NOMINMAX
 #include <windows.h>
 #undef DeleteFile
 #include <cassert>
@@ -70,9 +69,9 @@ void Mutex::AssertHeld() {
 }
 
 CondVar::CondVar(Mutex* mu) :
-    waiting_(0), 
-    mu_(mu), 
-    sem1_(::CreateSemaphore(NULL, 0, 10000, NULL)), 
+    mu_(mu),
+    waiting_(0),
+    sem1_(::CreateSemaphore(NULL, 0, 10000, NULL)),
     sem2_(::CreateSemaphore(NULL, 0, 10000, NULL)) {
   assert(mu_);
 }
@@ -127,7 +126,7 @@ BOOL CALLBACK InitHandleFunction (PINIT_ONCE InitOnce, PVOID func, PVOID *lpCont
 }
 
 void InitOnce(OnceType* once, void (*initializer)()) {
-  InitOnceExecuteOnce((PINIT_ONCE)once, InitHandleFunction, initializer, NULL);
+  InitOnceExecuteOnce((PINIT_ONCE)once, InitHandleFunction, (void*)initializer, NULL);
 }
 
 }
