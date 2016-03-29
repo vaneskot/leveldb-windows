@@ -11,9 +11,9 @@
 #include "leveldb/options.h"
 
 #define LEVELDB_VERSION_MAJOR 1
-#define LEVELDB_VERSION_MINOR 16
+#define LEVELDB_VERSION_MINOR 18
 #define LEVELDB_VERSION_PATCH 0
-#define LEVELDB_VERSION_STRING "1.16.0.0"
+#define LEVELDB_VERSION_STRING "1.18.0.0"
 
 namespace leveldb {
 
